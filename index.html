@@ -231,6 +231,9 @@
                 <div id="thank-you-message" style="display: none;" class="p-4 rounded-xl bg-emerald-100 text-emerald-900 border border-emerald-300 dark:bg-emerald-900/50 dark:text-emerald-200 dark:border-emerald-500/50">
                     Thanks for applying! Our team will reach out on WhatsApp/SMS within 48 hours.
                 </div>
+                 <div id="error-message" style="display: none;" class="p-4 rounded-xl bg-red-100 text-red-900 border border-red-300 dark:bg-red-900/50 dark:text-red-200 dark:border-red-500/50">
+                    Sorry, there was an error submitting your form. Please try again later or contact us directly.
+                </div>
                 
                 <form id="volunteer-form" class="grid md:grid-cols-2 gap-4">
                     <label class="block">
@@ -262,7 +265,7 @@
                         <textarea name="skills" placeholder="e.g., Lawyer; weekends 4–6 hrs" class="mt-1 w-full rounded-xl border border-zinc-300 dark:border-zinc-700 bg-white/80 dark:bg-zinc-900/70 p-3 outline-none focus:ring-2 focus:ring-blue-500 min-h-[120px]"></textarea>
                     </label>
                     <div class="md:col-span-2 flex items-center justify-between gap-3 mt-2">
-                        <button type="submit" class="px-5 py-3 rounded-xl bg-blue-600 text-white font-semibold hover:bg-blue-700">Submit</button>
+                        <button type="submit" class="px-5 py-3 rounded-xl bg-blue-600 text-white font-semibold hover:bg-blue-700 disabled:bg-blue-400">Submit</button>
                         <a href="https://wa.me/91XXXXXXXXXX?text=I%20want%20to%20volunteer%20with%20United%20India%20Foundation" class="text-blue-600 hover:underline">Or apply via WhatsApp →</a>
                     </div>
                 </form>
@@ -278,11 +281,11 @@
                     <div class="mt-4 grid sm:grid-cols-2 gap-4 text-sm">
                         <div class="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800">
                             <div class="font-semibold">Email</div>
-                            <div>info@unitedindia.org (placeholder)</div>
+                            <div>admin@unitedindiafoundation.in (placeholder)</div>
                         </div>
                         <div class="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800">
                             <div class="font-semibold">Phone</div>
-                            <div>+91‑XXXXXXXXXX</div>
+                            <div>+91‑8287539577</div>
                         </div>
                         <div class="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800">
                             <div class="font-semibold">Address</div>
@@ -330,18 +333,50 @@
     </footer>
 
     <script>
-        // Handle Volunteer Form Submission
         const volunteerForm = document.getElementById('volunteer-form');
         const thankYouMessage = document.getElementById('thank-you-message');
+        const errorMessage = document.getElementById('error-message');
+        
+        // This URL points the form to your Google Apps Script.
+        const SCRIPT_URL = "https://script.google.com/macros/s/AKfycby7zFq77gM-5YWQ5dg1FnTKdLqWTOhJMPIs-t9Mc37lVRjwOVgylQJHr7jhTEI6temCNg/exec"; 
 
         volunteerForm.addEventListener('submit', function(event) {
             event.preventDefault(); // Prevent the default form submission
             
-            // NOTE: In a real application, you would send form data to a server here.
-            // For example, using fetch().
-            
-            volunteerForm.style.display = 'none';
-            thankYouMessage.style.display = 'block';
+            const submitButton = volunteerForm.querySelector('button[type="submit"]');
+            const originalButtonText = submitButton.innerHTML;
+            submitButton.disabled = true;
+            submitButton.innerHTML = 'Submitting...';
+            errorMessage.style.display = 'none'; // Hide previous error messages
+
+            const formData = new FormData(volunteerForm);
+
+            fetch(SCRIPT_URL, {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.result === 'success') {
+                    // On success, hide the form and show the thank you message.
+                    volunteerForm.style.display = 'none';
+                    thankYouMessage.style.display = 'block';
+                } else {
+                    // On failure, show an error message and re-enable the form.
+                    errorMessage.style.display = 'block';
+                    submitButton.disabled = false;
+                    submitButton.innerHTML = originalButtonText;
+                    // Log the detailed error from the script to the console for debugging.
+                    console.error('Submission failed:', data.error);
+                }
+            })
+            .catch(error => {
+                // Handle network errors or other issues with the fetch call.
+                console.error('Fetch Error:', error);
+                errorMessage.style.display = 'block';
+                submitButton.disabled = false;
+                submitButton.innerHTML = originalButtonText;
+            });
         });
 
         // Set current year in footer
