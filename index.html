@@ -17,6 +17,7 @@
         /* Apply the Inter font family */
         body {
             font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
         }
     </style>
 </head>
@@ -25,18 +26,17 @@
     <!-- NAVBAR -->
     <header class="sticky top-0 z-30 backdrop-blur bg-white/70 dark:bg-zinc-900/60 border-b border-zinc-200/50 dark:border-zinc-800">
         <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
-            <div class="flex items-center gap-3">
+            <a href="#" class="flex items-center gap-3">
                 <img src="unitedindiafoundation.jpeg" alt="United India Foundation Logo" class="h-10 w-10 rounded-full object-cover">
                 <div>
                     <div class="font-bold tracking-tight text-lg">UNITED INDIA FOUNDATION</div>
                     <div class="text-[11px] uppercase tracking-widest text-zinc-500">One Nation, One Future</div>
                 </div>
-            </div>
-            <nav class="hidden md:flex gap-6 text-sm text-zinc-700 dark:text-zinc-300">
+            </a>
+            <nav class="hidden md:flex gap-x-5 text-sm text-zinc-700 dark:text-zinc-300">
                 <a href="#about" class="hover:text-blue-600">About</a>
-                <a href="#pillars" class="hover:text-blue-600">Pillars</a>
-                <a href="#programs" class="hover:text-blue-600">Programs</a>
-                <a href="#chapters" class="hover:text-blue-600">Chapters</a>
+                <a href="#what-we-do" class="hover:text-blue-600">Our Work</a>
+                <a href="#model" class="hover:text-blue-600">Our Model</a>
                 <a href="#volunteer" class="hover:text-blue-600">Volunteer</a>
                 <a href="#contact" class="hover:text-blue-600">Contact</a>
             </nav>
@@ -52,31 +52,16 @@
                         Empowering Lives. <span class="text-blue-600">Uniting India.</span>
                     </h1>
                     <p class="mt-4 text-lg text-zinc-600 dark:text-zinc-300">
-                        A nationwide not‑for‑profit working across <strong>Legal Aid</strong>, <strong>Environment</strong>, <strong>Education</strong>, <strong>Health</strong> and <strong>Community Welfare</strong>.
+                       A nationwide not‑for‑profit working across <strong>Legal Aid</strong>, <strong>Environment</strong>, <strong>Education</strong>, <strong>Health</strong> and <strong>Community Welfare</strong> to build a nation that is fearless, aware, and sustainable.
                     </p>
                     <div class="mt-6 flex flex-wrap gap-3">
                         <a href="#volunteer" class="px-5 py-3 rounded-xl bg-blue-600 text-white font-semibold hover:bg-blue-700">Become a Volunteer</a>
                         <a href="#about" class="px-5 py-3 rounded-xl border border-zinc-300 dark:border-zinc-700 hover:border-blue-500">Learn More</a>
                     </div>
-                    <div class="mt-8 grid grid-cols-3 gap-6">
-                        <div class="text-center">
-                            <div class="text-3xl font-extrabold tracking-tight">5</div>
-                            <div class="text-xs uppercase tracking-wide text-zinc-500 mt-1">States Target (Phase I)</div>
-                        </div>
-                        <div class="text-center">
-                            <div class="text-3xl font-extrabold tracking-tight">500+</div>
-                            <div class="text-xs uppercase tracking-wide text-zinc-500 mt-1">Initial Volunteers</div>
-                        </div>
-                        <div class="text-center">
-                            <div class="text-3xl font-extrabold tracking-tight">5</div>
-                            <div class="text-xs uppercase tracking-wide text-zinc-500 mt-1">Focus Areas</div>
-                        </div>
-                    </div>
                 </div>
                 <div class="relative">
                     <div class="rounded-3xl p-1 bg-gradient-to-br from-amber-400 via-yellow-500 to-amber-600 shadow-2xl">
                         <div class="rounded-2xl bg-zinc-900 p-6">
-                            <!-- Emblem -->
                             <div class="aspect-square rounded-xl">
                                 <img src="unitedindiafoundation.jpeg" alt="United India Foundation Emblem" class="w-full h-full object-cover rounded-xl shadow-lg">
                             </div>
@@ -87,152 +72,136 @@
         </section>
 
         <!-- ABOUT -->
-        <section id="about" class="py-14 border-t border-zinc-200/70 dark:border-zinc-800/80">
-            <div class="max-w-7xl mx-auto px-4 grid lg:grid-cols-3 gap-10 items-start">
-                <div class="lg:col-span-2">
-                    <h2 class="text-2xl md:text-3xl font-bold tracking-tight mb-3">About United India Foundation</h2>
-                    <p class="text-zinc-700 dark:text-zinc-300 leading-relaxed">
-                        Registered public charitable trust headquartered at <strong>Rishikesh, Uttarakhand</strong>.
-                        We build a fearless, aware & sustainable future through legal aid, environmental action,
-                        education initiatives, healthcare access and community development.
+        <section id="about" class="py-16 border-t border-zinc-200/70 dark:border-zinc-800/80">
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="text-center max-w-3xl mx-auto">
+                    <h2 class="text-3xl font-bold tracking-tight">About United India Foundation</h2>
+                    <p class="mt-4 text-zinc-700 dark:text-zinc-300 leading-relaxed">
+                        United India Foundation (UIF) is a public charitable trust headquartered in Rishikesh, Uttarakhand, working across five pillars—Legal Aid, Environment, Education, Health, and Community Outreach—to build a nation that is fearless, aware, and sustainable. Our motto, “One Nation, One Future,” reflects a simple idea: when every Indian is empowered, India is united.
                     </p>
-                    <div class="mt-6 grid sm:grid-cols-2 gap-4 text-sm">
-                        <div class="p-4 rounded-xl bg-white/70 dark:bg-zinc-900/60 border border-zinc-200/60 dark:border-zinc-800">
-                            <div class="font-semibold mb-1">Registration & Compliance</div>
-                            PAN • Bank A/c • 12A/80G (apply) • FCRA (when eligible)
-                        </div>
-                        <div class="p-4 rounded-xl bg-white/70 dark:bg-zinc-900/60 border border-zinc-200/60 dark:border-zinc-800">
-                            <div class="font-semibold mb-1">Chapters</div>
-                            Phase‑I: Uttarakhand, Delhi, Uttar Pradesh, Haryana, Maharashtra
-                        </div>
+                </div>
+                <div class="mt-12 grid md:grid-cols-2 lg:grid-cols-3 gap-8 text-center">
+                    <div class="rounded-2xl p-6 border bg-white/60 dark:bg-zinc-900/60 border-zinc-200/60 dark:border-zinc-800">
+                        <h3 class="text-xl font-semibold text-blue-600">Our Mission</h3>
+                        <p class="mt-2 text-sm text-zinc-600 dark:text-zinc-300">To empower individuals and communities with access to justice, quality learning, better health, a greener environment, and reliable social support—so that they can live with dignity, safety, and opportunity.</p>
+                    </div>
+                    <div class="rounded-2xl p-6 border bg-white/60 dark:bg-zinc-900/60 border-zinc-200/60 dark:border-zinc-800 lg:col-span-2">
+                        <h3 class="text-xl font-semibold text-blue-600">Our Vision</h3>
+                        <p class="mt-2 text-sm text-zinc-600 dark:text-zinc-300">An India where rights are protected, voices are heard, resources are shared fairly, and communities thrive through people-powered action—from village wards to state capitals.</p>
                     </div>
                 </div>
-                <div class="rounded-2xl border border-amber-200/60 bg-amber-50/60 dark:bg-zinc-900/60 dark:border-amber-500/20 p-6">
-                    <div class="font-semibold text-amber-800 dark:text-amber-300">Head Office</div>
-                    <div class="text-sm mt-1 text-zinc-700 dark:text-zinc-200">B‑7, First Floor, Ganga Vatika, Phase‑1, Muni Ki Reti, Rishikesh, Uttarakhand – 249137</div>
-                    <div class="mt-4 text-sm">
-                        <div>📧 admin@unitedindiafoundation.in</div>
-                        <div>📞 +91‑8287539577</div>
+                 <div class="mt-8">
+                     <h3 class="text-2xl font-bold tracking-tight text-center mb-6">Our Values</h3>
+                     <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-4 text-sm">
+                         <div class="p-4 text-center rounded-xl bg-white/70 dark:bg-zinc-900/70 border border-zinc-200/60 dark:border-zinc-800"><strong>Nyaya (Justice):</strong> Law must protect, not intimidate.</div>
+                         <div class="p-4 text-center rounded-xl bg-white/70 dark:bg-zinc-900/70 border border-zinc-200/60 dark:border-zinc-800"><strong>Seva (Service):</strong> People first—especially the underserved.</div>
+                         <div class="p-4 text-center rounded-xl bg-white/70 dark:bg-zinc-900/70 border border-zinc-200/60 dark:border-zinc-800"><strong>Sustainability:</strong> Long-term impact over short-term fixes.</div>
+                         <div class="p-4 text-center rounded-xl bg-white/70 dark:bg-zinc-900/70 border border-zinc-200/60 dark:border-zinc-800"><strong>Integrity:</strong> Transparent funds, clear processes, independent audits.</div>
+                         <div class="p-4 text-center rounded-xl bg-white/70 dark:bg-zinc-900/70 border border-zinc-200/60 dark:border-zinc-800"><strong>Unity in Diversity:</strong> Non-partisan, non-religious, and inclusive.</div>
+                     </div>
+                 </div>
+            </div>
+        </section>
+
+        <!-- WHAT WE DO -->
+        <section id="what-we-do" class="py-16 bg-zinc-50 dark:bg-zinc-950">
+            <div class="max-w-7xl mx-auto px-4">
+                <h2 class="text-3xl font-bold tracking-tight text-center mb-10">What We Do</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="p-6 rounded-2xl bg-white/70 dark:bg-zinc-900/70 border border-zinc-200/60 dark:border-zinc-800">
+                        <h3 class="text-xl font-semibold mb-3 flex items-center gap-2">⚖️ Legal Aid & Justice Support</h3>
+                        <ul class="space-y-2 text-sm text-zinc-600 dark:text-zinc-300 list-disc list-inside">
+                            <li>Free legal clinics, case triage, RTI help, and documentation support</li>
+                            <li>Rights awareness sessions (women, senior citizens, workers, students)</li>
+                            <li>Referral network of advocates and paralegals</li>
+                        </ul>
+                    </div>
+                     <div class="p-6 rounded-2xl bg-white/70 dark:bg-zinc-900/70 border border-zinc-200/60 dark:border-zinc-800">
+                        <h3 class="text-xl font-semibold mb-3 flex items-center gap-2">🌱 Environment & Sustainability</h3>
+                        <ul class="space-y-2 text-sm text-zinc-600 dark:text-zinc-300 list-disc list-inside">
+                            <li>Tree plantation & urban clean-up drives</li>
+                            <li>Water & waste management awareness</li>
+                            <li>Climate literacy workshops for schools & RWAs</li>
+                        </ul>
+                    </div>
+                     <div class="p-6 rounded-2xl bg-white/70 dark:bg-zinc-900/70 border border-zinc-200/60 dark:border-zinc-800">
+                        <h3 class="text-xl font-semibold mb-3 flex items-center gap-2">📖 Education & Youth Empowerment</h3>
+                        <ul class="space-y-2 text-sm text-zinc-600 dark:text-zinc-300 list-disc list-inside">
+                            <li>After-school support and digital literacy labs</li>
+                            <li>Mentorship & scholarships for deserving students</li>
+                            <li>Life-skills & career guidance, especially for first-gen learners</li>
+                        </ul>
+                    </div>
+                     <div class="p-6 rounded-2xl bg-white/70 dark:bg-zinc-900/70 border border-zinc-200/60 dark:border-zinc-800">
+                        <h3 class="text-xl font-semibold mb-3 flex items-center gap-2">❤️ Health & Wellness</h3>
+                        <ul class="space-y-2 text-sm text-zinc-600 dark:text-zinc-300 list-disc list-inside">
+                            <li>Health camps, blood donation, and preventive screening</li>
+                            <li>Mental health counselling & addiction support (with partners)</li>
+                            <li>Yoga & wellness sessions for community resilience</li>
+                        </ul>
+                    </div>
+                     <div class="p-6 rounded-2xl bg-white/70 dark:bg-zinc-900/70 border border-zinc-200/60 dark:border-zinc-800">
+                        <h3 class="text-xl font-semibold mb-3 flex items-center gap-2">🤝 Community Outreach & Relief</h3>
+                        <ul class="space-y-2 text-sm text-zinc-600 dark:text-zinc-300 list-disc list-inside">
+                            <li>Women/child protection helpdesks, senior citizen care</li>
+                            <li>Emergency relief & rehabilitation during disasters</li>
+                            <li>Helpline, workshops, and local leadership programs</li>
+                        </ul>
+                    </div>
+                     <div class="p-6 rounded-2xl bg-white/70 dark:bg-zinc-900/70 border border-zinc-200/60 dark:border-zinc-800">
+                        <h3 class="text-xl font-semibold mb-3 flex items-center gap-2">👥 Who We Serve</h3>
+                        <ul class="space-y-2 text-sm text-zinc-600 dark:text-zinc-300 list-disc list-inside">
+                            <li>Individuals facing misuse of law, domestic/legal harassment, or procedural barriers</li>
+                            <li>Women, children, and senior citizens needing protection and support</li>
+                            <li>Low-income families seeking education/health assistance</li>
+                            <li>Communities vulnerable to climate and disaster risks</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- PILLARS -->
-        <section id="pillars" class="py-14">
+        <!-- OUR MODEL -->
+        <section id="model" class="py-16">
             <div class="max-w-7xl mx-auto px-4">
-                <h2 class="text-2xl md:text-3xl font-bold tracking-tight mb-8">Our Five Pillars</h2>
-                <div class="grid md:grid-cols-3 lg:grid-cols-5 gap-5">
-                    <div class="rounded-2xl bg-white/70 dark:bg-zinc-900/70 shadow-xl p-6 backdrop-blur border border-zinc-200/40 dark:border-zinc-800/60">
-                        <div class="text-3xl mb-3" aria-hidden>⚖️</div>
-                        <h3 class="text-xl font-semibold tracking-tight mb-2">Legal Aid</h3>
-                        <ul class="space-y-1 text-sm text-zinc-600 dark:text-zinc-300">
-                            <li class="flex gap-2"><span class="mt-1">•</span><span>Aid desks & clinics</span></li>
-                            <li class="flex gap-2"><span class="mt-1">•</span><span>RTI help & documentation</span></li>
-                            <li class="flex gap-2"><span class="mt-1">•</span><span>Rights awareness</span></li>
-                        </ul>
-                    </div>
-                    <div class="rounded-2xl bg-white/70 dark:bg-zinc-900/70 shadow-xl p-6 backdrop-blur border border-zinc-200/40 dark:border-zinc-800/60">
-                        <div class="text-3xl mb-3" aria-hidden>🌱</div>
-                        <h3 class="text-xl font-semibold tracking-tight mb-2">Environment</h3>
-                        <ul class="space-y-1 text-sm text-zinc-600 dark:text-zinc-300">
-                            <li class="flex gap-2"><span class="mt-1">•</span><span>Plantation & clean‑ups</span></li>
-                            <li class="flex gap-2"><span class="mt-1">•</span><span>Waste & water action</span></li>
-                            <li class="flex gap-2"><span class="mt-1">•</span><span>Climate awareness</span></li>
-                        </ul>
-                    </div>
-                    <div class="rounded-2xl bg-white/70 dark:bg-zinc-900/70 shadow-xl p-6 backdrop-blur border border-zinc-200/40 dark:border-zinc-800/60">
-                        <div class="text-3xl mb-3" aria-hidden>📖</div>
-                        <h3 class="text-xl font-semibold tracking-tight mb-2">Education</h3>
-                        <ul class="space-y-1 text-sm text-zinc-600 dark:text-zinc-300">
-                            <li class="flex gap-2"><span class="mt-1">•</span><span>After‑school support</span></li>
-                            <li class="flex gap-2"><span class="mt-1">•</span><span>Digital literacy</span></li>
-                            <li class="flex gap-2"><span class="mt-1">•</span><span>Mentoring & scholarships</span></li>
-                        </ul>
-                    </div>
-                    <div class="rounded-2xl bg-white/70 dark:bg-zinc-900/70 shadow-xl p-6 backdrop-blur border border-zinc-200/40 dark:border-zinc-800/60">
-                        <div class="text-3xl mb-3" aria-hidden>❤️</div>
-                        <h3 class="text-xl font-semibold tracking-tight mb-2">Health</h3>
-                        <ul class="space-y-1 text-sm text-zinc-600 dark:text-zinc-300">
-                            <li class="flex gap-2"><span class="mt-1">•</span><span>Health camps</span></li>
-                            <li class="flex gap-2"><span class="mt-1">•</span><span>Mental health support</span></li>
-                            <li class="flex gap-2"><span class="mt-1">•</span><span>Wellness & yoga</span></li>
-                        </ul>
-                    </div>
-                    <div class="rounded-2xl bg-white/70 dark:bg-zinc-900/70 shadow-xl p-6 backdrop-blur border border-zinc-200/40 dark:border-zinc-800/60">
-                        <div class="text-3xl mb-3" aria-hidden>🤝</div>
-                        <h3 class="text-xl font-semibold tracking-tight mb-2">Outreach</h3>
-                        <ul class="space-y-1 text-sm text-zinc-600 dark:text-zinc-300">
-                            <li class="flex gap-2"><span class="mt-1">•</span><span>Women/Child/Senior support</span></li>
-                            <li class="flex gap-2"><span class="mt-1">•</span><span>Relief & rehab</span></li>
-                            <li class="flex gap-2"><span class="mt-1">•</span><span>Community drives</span></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- PROGRAMS -->
-        <section id="programs" class="py-14 bg-gradient-to-b from-white to-zinc-100 dark:from-zinc-950 dark:to-zinc-900">
-            <div class="max-w-7xl mx-auto px-4">
-                <h2 class="text-2xl md:text-3xl font-bold tracking-tight mb-8">Flagship Programs</h2>
-                <div class="grid lg:grid-cols-3 gap-6">
+                <h2 class="text-3xl font-bold tracking-tight text-center mb-10">How We Work (Our Model)</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                     <div class="rounded-2xl p-6 border bg-white/70 dark:bg-zinc-900/70 border-zinc-200/60 dark:border-zinc-800">
-                        <h3 class="font-semibold mb-2">NATIONAL LEGAL HELPDESK</h3>
-                        <p class="text-sm text-zinc-600 dark:text-zinc-300">Monthly clinics across chapters with case triage, documentation SOPs and referrals.</p>
+                        <h3 class="font-semibold mb-2">Chapter Network</h3>
+                        <p class="text-sm text-zinc-600 dark:text-zinc-300">National HQ → State Chapters → District Units → Local Teams</p>
                     </div>
                     <div class="rounded-2xl p-6 border bg-white/70 dark:bg-zinc-900/70 border-zinc-200/60 dark:border-zinc-800">
-                        <h3 class="font-semibold mb-2">GREEN INDIA DRIVE</h3>
-                        <p class="text-sm text-zinc-600 dark:text-zinc-300">Plantation, clean‑ups, and sustainability workshops in schools & communities.</p>
+                        <h3 class="font-semibold mb-2">Local Leaders</h3>
+                        <p class="text-sm text-zinc-600 dark:text-zinc-300">Area/Block/College Team Leaders manage ground volunteers</p>
                     </div>
                     <div class="rounded-2xl p-6 border bg-white/70 dark:bg-zinc-900/70 border-zinc-200/60 dark:border-zinc-800">
-                        <h3 class="font-semibold mb-2">LEARN & LEAD</h3>
-                        <p class="text-sm text-zinc-600 dark:text-zinc-300">Education + youth leadership: after‑school support, digital labs, scholarships.</p>
+                        <h3 class="font-semibold mb-2">Professionals + Volunteers</h3>
+                        <p class="text-sm text-zinc-600 dark:text-zinc-300">Advocates, teachers, doctors, and skilled citizens work with trained volunteers</p>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- CHAPTERS -->
-        <section id="chapters" class="py-14">
-            <div class="max-w-7xl mx-auto px-4">
-                <h2 class="text-2xl md:text-3xl font-bold tracking-tight mb-6">Chapters & Expansion</h2>
-                <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-4 text-sm">
-                    <div class="rounded-xl border border-zinc-200 dark:border-zinc-800 p-4 bg-white/70 dark:bg-zinc-900/70">
-                        <div class="font-semibold">Uttarakhand</div>
-                        <div class="text-zinc-600 dark:text-zinc-400">State President: To be appointed</div>
+                    <div class="rounded-2xl p-6 border bg-white/70 dark:bg-zinc-900/70 border-zinc-200/60 dark:border-zinc-800">
+                        <h3 class="font-semibold mb-2">Data & Documentation</h3>
+                        <p class="text-sm text-zinc-600 dark:text-zinc-300">Standard Operating Procedures (SOPs), consent-based case logs, and impact dashboards</p>
                     </div>
-                    <div class="rounded-xl border border-zinc-200 dark:border-zinc-800 p-4 bg-white/70 dark:bg-zinc-900/70">
-                        <div class="font-semibold">Delhi</div>
-                        <div class="text-zinc-600 dark:text-zinc-400">State President: To be appointed</div>
-                    </div>
-                    <div class="rounded-xl border border-zinc-200 dark:border-zinc-800 p-4 bg-white/70 dark:bg-zinc-900/70">
-                        <div class="font-semibold">Uttar Pradesh</div>
-                        <div class="text-zinc-600 dark:text-zinc-400">State President: To be appointed</div>
-                    </div>
-                    <div class="rounded-xl border border-zinc-200 dark:border-zinc-800 p-4 bg-white/70 dark:bg-zinc-900/70">
-                        <div class="font-semibold">Haryana</div>
-                        <div class="text-zinc-600 dark:text-zinc-400">State President: To be appointed</div>
-                    </div>
-                    <div class="rounded-xl border border-zinc-200 dark:border-zinc-800 p-4 bg-white/70 dark:bg-zinc-900/70">
-                        <div class="font-semibold">Maharashtra</div>
-                        <div class="text-zinc-600 dark:text-zinc-400">State President: To be appointed</div>
+                     <div class="rounded-2xl p-6 border bg-white/70 dark:bg-zinc-900/70 border-zinc-200/60 dark:border-zinc-800 lg:col-span-2">
+                        <h3 class="font-semibold mb-2">Partnerships</h3>
+                        <p class="text-sm text-zinc-600 dark:text-zinc-300">Collaboration with legal aid cells, hospitals, schools, RWAs, CSR partners, and local administration</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- VOLUNTEER FORM -->
-        <section id="volunteer" class="py-14 bg-gradient-to-b from-zinc-100 to-white dark:from-zinc-900 dark:to-zinc-950">
+        <section id="volunteer" class="py-16 bg-gradient-to-b from-zinc-100 to-white dark:from-zinc-900 dark:to-zinc-950">
             <div class="max-w-5xl mx-auto px-4">
-                <h2 class="text-2xl md:text-3xl font-bold tracking-tight mb-2">Become a Volunteer</h2>
-                <p class="text-sm text-zinc-600 dark:text-zinc-300 mb-6">Fill this quick form. Our team will assign you to the nearest chapter and wing.</p>
+                <h2 class="text-3xl font-bold tracking-tight text-center mb-2">Become a Volunteer</h2>
+                <p class="text-sm text-center text-zinc-600 dark:text-zinc-300 mb-8">Fill this quick form. Our team will assign you to the nearest chapter and wing.</p>
                 
                 <div id="thank-you-message" style="display: none;" class="p-4 rounded-xl bg-emerald-100 text-emerald-900 border border-emerald-300 dark:bg-emerald-900/50 dark:text-emerald-200 dark:border-emerald-500/50">
                     Thanks for applying! Our team will reach out on WhatsApp/SMS within 48 hours.
                 </div>
                  <div id="error-message" style="display: none;" class="p-4 rounded-xl bg-red-100 text-red-900 border border-red-300 dark:bg-red-900/50 dark:text-red-200 dark:border-red-500/50">
-                    Sorry, there was an error submitting your form. Please try again later or contact us directly.
+                    Sorry, there was an error submitting your form. Please try again or contact us directly. <br>
+                    <span class="text-xs" id="error-details"></span>
                 </div>
                 
                 <form id="volunteer-form" class="grid md:grid-cols-2 gap-4">
@@ -264,71 +233,48 @@
                         <span class="text-sm font-medium text-zinc-700 dark:text-zinc-200">Skills & Availability (hours/week)</span>
                         <textarea name="skills" placeholder="e.g., Lawyer; weekends 4–6 hrs" class="mt-1 w-full rounded-xl border border-zinc-300 dark:border-zinc-700 bg-white/80 dark:bg-zinc-900/70 p-3 outline-none focus:ring-2 focus:ring-blue-500 min-h-[120px]"></textarea>
                     </label>
-                    <div class="md:col-span-2 flex items-center justify-between gap-3 mt-2">
+                    <div class="md:col-span-2 flex items-center justify-start gap-3 mt-2">
                         <button type="submit" class="px-5 py-3 rounded-xl bg-blue-600 text-white font-semibold hover:bg-blue-700 disabled:bg-blue-400">Submit</button>
-                        <a href="https://wa.me/918287539577?text=I%20want%20to%20volunteer%20with%20United%20India%20Foundation" class="text-blue-600 hover:underline">Or apply via WhatsApp →</a>
                     </div>
                 </form>
             </div>
         </section>
 
-        <!-- CONTACT -->
-        <section id="contact" class="py-14">
-            <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-3 gap-8">
-                <div class="md:col-span-2">
-                    <h2 class="text-2xl md:text-3xl font-bold tracking-tight mb-3">Get in Touch</h2>
-                    <p class="text-zinc-600 dark:text-zinc-300">For partnerships, CSR, or media, write to us or call the national office.</p>
-                    <div class="mt-4 grid sm:grid-cols-2 gap-4 text-sm">
-                        <div class="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800">
-                            <div class="font-semibold">Email</div>
-                            <div>admin@unitedindiafoundation.in</div>
-                        </div>
-                        <div class="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800">
-                            <div class="font-semibold">Phone</div>
-                            <div>+91‑8287539577</div>
-                        </div>
-                        <div class="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800">
-                            <div class="font-semibold">Address</div>
-                            <div>B‑7, First Floor, Ganga Vatika, Phase‑1, Muni Ki Reti, Rishikesh, Uttarakhand – 249137</div>
-                        </div>
-                        <div class="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800">
-                            <div class="font-semibold">Social</div>
-                            <div class="flex gap-3 text-blue-600">
-                                <a href="#">Twitter</a><a href="#">Instagram</a><a href="#">LinkedIn</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="rounded-2xl border border-zinc-200 dark:border-zinc-800 p-6">
-                    <h3 class="font-semibold mb-2">Donate (coming soon)</h3>
-                    <p class="text-sm text-zinc-600 dark:text-zinc-300">After 12A/80G approval, we’ll enable secure online donations. For now, write to us for CSR partnerships.</p>
-                </div>
+        <!-- CONTACT & GOVERNANCE -->
+        <section id="contact" class="py-16">
+            <div class="max-w-7xl mx-auto px-4">
+                 <h2 class="text-3xl font-bold tracking-tight text-center mb-10">Contact & Governance</h2>
+                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                     <div class="lg:col-span-2 p-6 rounded-2xl border bg-white/70 dark:bg-zinc-900/70 border-zinc-200/60 dark:border-zinc-800">
+                         <h3 class="font-semibold mb-3">Governance & Compliance</h3>
+                         <ul class="space-y-3 text-sm text-zinc-600 dark:text-zinc-300">
+                             <li><strong>Governing Trustees:</strong> Founder & National President Gaurav Goyal</li>
+                             <li><strong>Registration:</strong> Public Charitable Trust</li>
+                             <li><strong>Finance & Audits:</strong> Separate Trust bank account; independent auditing; donor receipts.</li>
+                             <li><strong>Safeguarding:</strong> Zero-tolerance policy for abuse or harassment; child protection and data privacy SOPs.</li>
+                         </ul>
+                     </div>
+                     <div class="p-6 rounded-2xl border bg-white/70 dark:bg-zinc-900/70 border-zinc-200/60 dark:border-zinc-800">
+                         <h3 class="font-semibold mb-2">Get in Touch</h3>
+                         <div class="text-sm space-y-2 text-zinc-600 dark:text-zinc-300">
+                            <p><strong>Email:</strong> admin@unitedindiafoundation.in</p>
+                            <p><strong>Phone:</strong> +91-8287539577</p>
+                            <p><strong>Address:</strong> B-7, First Floor, Ganga Vatika, Phase-1, Muni Ki Reti, Rishikesh, Uttarakhand – 249137</p>
+                         </div>
+                     </div>
+                 </div>
             </div>
         </section>
     </main>
 
     <!-- FOOTER -->
     <footer class="border-t border-zinc-200 dark:border-zinc-800 py-8 bg-white/60 dark:bg-zinc-950/60">
-        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center md:items-start justify-between gap-6">
-            <div class="text-center md:text-left">
+        <div class="max-w-7xl mx-auto px-4 text-center sm:flex sm:items-start sm:justify-between gap-6">
+            <div class="text-center sm:text-left mb-4 sm:mb-0">
                 <div class="font-bold">UNITED INDIA FOUNDATION</div>
-                <div class="text-xs text-zinc-500">One Nation, One Future</div>
+                <div class="text-xs text-zinc-500">“One Nation, One Future.”</div>
             </div>
-            <div class="flex flex-col sm:flex-row gap-6 text-center sm:text-left">
-                <div class="flex flex-col space-y-2">
-                    <div class="text-xs font-semibold text-zinc-500">Explore</div>
-                    <a class="text-sm text-zinc-600 dark:text-zinc-300 hover:text-blue-600" href="#about">About</a>
-                    <a class="text-sm text-zinc-600 dark:text-zinc-300 hover:text-blue-600" href="#pillars">Pillars</a>
-                    <a class="text-sm text-zinc-600 dark:text-zinc-300 hover:text-blue-600" href="#programs">Programs</a>
-                </div>
-                <div class="flex flex-col space-y-2">
-                    <div class="text-xs font-semibold text-zinc-500">Get Involved</div>
-                    <a class="text-sm text-zinc-600 dark:text-zinc-300 hover:text-blue-600" href="#volunteer">Volunteer</a>
-                    <a class="text-sm text-zinc-600 dark:text-zinc-300 hover:text-blue-600" href="#chapters">Chapters</a>
-                    <a class="text-sm text-zinc-600 dark:text-zinc-300 hover:text-blue-600" href="#contact">Contact</a>
-                </div>
-            </div>
-            <div class="text-xs text-zinc-500 text-center md:text-right">©️ <span id="current-year"></span> United India Foundation. All rights reserved.</div>
+            <div class="text-xs text-zinc-500">©️ <span id="current-year"></span> United India Foundation. All rights reserved.</div>
         </div>
     </footer>
 
@@ -337,17 +283,16 @@
         const thankYouMessage = document.getElementById('thank-you-message');
         const errorMessage = document.getElementById('error-message');
         
-        // This URL points the form to your Google Apps Script.
-        const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzfIpPttlkIns5eKqxxO7IM2mKHebnveWZP3TOx0MoDhdvlZFNffbtyFOHRFSM90l5R1A/exec"; 
+        const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzfIpPttlkIns5eKqxxO7IM2mKHebnveWZP3TOx0MoDhdvlZFNffbtyFOHRFSM90l5R1A/exec";
 
         volunteerForm.addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent the default form submission
+            event.preventDefault();
             
             const submitButton = volunteerForm.querySelector('button[type="submit"]');
             const originalButtonText = submitButton.innerHTML;
             submitButton.disabled = true;
             submitButton.innerHTML = 'Submitting...';
-            errorMessage.style.display = 'none'; // Hide previous error messages
+            errorMessage.style.display = 'none';
 
             const formData = new FormData(volunteerForm);
 
@@ -358,29 +303,41 @@
             .then(response => response.json())
             .then(data => {
                 if (data.result === 'success') {
-                    // On success, hide the form and show the thank you message.
                     volunteerForm.style.display = 'none';
                     thankYouMessage.style.display = 'block';
+
+                    // Set a timer to hide the message and show the form again
+                    setTimeout(() => {
+                        thankYouMessage.style.display = 'none';
+                        volunteerForm.style.display = 'grid'; // The form uses grid layout
+                        volunteerForm.reset(); // Clear the form fields
+                        
+                        // Also re-enable the submit button and restore its text
+                        submitButton.disabled = false;
+                        submitButton.innerHTML = originalButtonText;
+                    }, 5000); // 5000 milliseconds = 5 seconds
+
                 } else {
-                    // On failure, show an error message and re-enable the form.
                     errorMessage.style.display = 'block';
+                    document.getElementById('error-details').textContent = 'Error: ' + (data.error || 'Unknown error');
                     submitButton.disabled = false;
                     submitButton.innerHTML = originalButtonText;
-                    // Log the detailed error from the script to the console for debugging.
                     console.error('Submission failed:', data.error);
                 }
             })
             .catch(error => {
-                // Handle network errors or other issues with the fetch call.
                 console.error('Fetch Error:', error);
                 errorMessage.style.display = 'block';
+                document.getElementById('error-details').textContent = 'Could not connect to the server. Please check your internet connection.';
                 submitButton.disabled = false;
                 submitButton.innerHTML = originalButtonText;
             });
         });
 
-        // Set current year in footer
         document.getElementById('current-year').textContent = new Date().getFullYear();
     </script>
 </body>
 </html>
+
+
+
