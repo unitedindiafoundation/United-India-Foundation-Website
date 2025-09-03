@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,6 +19,19 @@
         body {
             font-family: 'Inter', sans-serif;
             scroll-behavior: smooth;
+        }
+        /* Sponsors Slideshow Animation */
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        .animate-scroll {
+            animation: scroll 40s linear infinite;
+        }
+
+        .group-hover\:pause:hover {
+            animation-play-state: paused;
         }
     </style>
 </head>
@@ -263,6 +278,29 @@
                  </div>
             </div>
         </section>
+
+        <!-- SPONSORS -->
+        <section id="sponsors" class="py-16 bg-zinc-50 dark:bg-zinc-950">
+            <div class="max-w-7xl mx-auto px-4">
+                <h2 class="text-3xl font-bold tracking-tight text-center mb-12">Our Sponsors and Associates</h2>
+                <div class="relative w-full overflow-hidden group">
+                    <div class="flex animate-scroll group-hover:pause">
+                        <!-- LOGOS - SET 1 -->
+                        <div class="flex-shrink-0 w-48 mx-10 flex items-center justify-center">
+                            <img src="g56usa.png" alt="Gopal's 56 Inc (USA)" class="max-h-24 w-auto object-contain">
+                        </div>
+                        
+                        <!-- LOGOS - SET 2 (DUPLICATED FOR SEAMLESS LOOP) -->
+                        <div class="flex-shrink-0 w-48 mx-10 flex items-center justify-center">
+                            <img src="G56 Logo bg.png" alt="Gopal's 56 Inc (USA)" class="max-h-24 w-auto object-contain">
+                        </div>
+                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <!-- FOOTER -->
@@ -336,8 +374,4 @@
     </script>
 </body>
 </html>
-
-
-
-
 
